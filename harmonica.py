@@ -1,6 +1,5 @@
 from matplotlib.image import imread
 from matplotlib import pyplot as plt,cm
-import plotc
 
 chromatic=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
 
@@ -107,9 +106,7 @@ print scale[2],"major blues:",[scale[2],chromatic[(keyind+6)%12],chromatic[(keyi
 chromatic[(keyind+8)%12],chromatic[(keyind+11)%12],chromatic[(keyind+1)%12]]
 
 try:
-	harp=imread("harp.png")
-	plt.imshow(harp,cmap = cm.Greys_r)
-	ax=plt.gca()
+	plt.imshow(imread("harp.png"),cmap = cm.Greys_r)
 
 	bottom=[245,495,625,755,885,1015,1150,1280,1410,1540,1665]
 	bottom.reverse()
